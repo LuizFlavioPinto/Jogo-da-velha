@@ -1,0 +1,26 @@
+.apresentacao{
+    text-align: center;
+    margin-right: 150px;
+}
+
+.espaco{
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    float: left;
+}
+
+.tabuleiro{
+    width: 612px;
+    margin: 0 auto;
+}
+
+.tabuleiro > div {
+    text-align: center;
+    font-size: 130px;
+    cursor: pointer;
+}
+
+.tabuleiro > div:hover {
+    background-color: lightblue;
+}
