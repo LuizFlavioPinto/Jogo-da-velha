@@ -50,13 +50,13 @@ function checarVencedor () {
     possVit[7] = (tabuleiro[4] === jogador) && tabuleiro[2] === tabuleiro[4] && tabuleiro[4] === tabuleiro[6]? true: false
 
     if(tabuleiro.indexOf("", 0) === -1){
-        setTimeout(reStart, 500)
         alert('Deu velha!!')
+        reStart()
     } else{
         for(let i = 0; i < 8; i++){
             if(possVit[i]){
-                setTimeout(reStart, 500)
                 alert(`Jogador ${jogador} ganhou!!!`)
+                reStart()
             }    
         }  
     } 
