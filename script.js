@@ -14,8 +14,6 @@ function jogada(posClicada) {
 
         checarVencedor()
         mudarJogador()
-    }else {
-        alert('Jogada inválida')
     }
 }
 
