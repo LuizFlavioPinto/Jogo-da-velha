@@ -49,15 +49,18 @@ function checarVencedor () {
     possVit[6] = (tabuleiro[0] === jogador) && tabuleiro[0] === tabuleiro[4] && tabuleiro[4] === tabuleiro[8]? true: false
     possVit[7] = (tabuleiro[4] === jogador) && tabuleiro[2] === tabuleiro[4] && tabuleiro[4] === tabuleiro[6]? true: false
 
-    if(tabuleiro.indexOf("", 0) === -1){
+    let continuar = true
+
+    for(let i = 0; i < 8; i++){
+        if(possVit[i]){
+            continuar = false
+            alert(`Jogador ${jogador} ganhou!!!`)
+            reStart()
+        } 
+    }  
+
+    if(tabuleiro.indexOf("", 0) === -1 && continuar === true){
         alert('Deu velha!!')
         reStart()
-    } else{
-        for(let i = 0; i < 8; i++){
-            if(possVit[i]){
-                alert(`Jogador ${jogador} ganhou!!!`)
-                reStart()
-            }    
-        }  
-    } 
-}
+    }
+} 
